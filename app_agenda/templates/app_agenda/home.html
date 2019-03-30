@@ -1,0 +1,10 @@
+<h1>Agenda Institucional</h1>
+{% for agendaInstitucional in object_list %}
+    {% if agendaInstitucional.publicar == True %}  
+    <div>
+        <h2>{{ agendaInstitucional.evento }}</h2>
+        <p>{{ agendaInstitucional.data | linebreaksbr }}</p>
+        <br>
+    </div>
+    {% endif %}
+{% endfor %}
